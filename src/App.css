@@ -3,27 +3,32 @@
   padding: 0;
   box-sizing: border-box;
 }
-.navbarmain{
+
+.navbarmain {
   width: 90vw;
   margin: auto;
 }
-.searchIconP{
+
+.searchIconP {
   position: relative;
 }
+
 .search {
   border-radius: 20px;
   margin-right: 3vw;
 }
-.userImg{
+
+.userImg {
   position: absolute;
   top: 13px;
   left: 0;
   width: 30px;
-  height:30px;
+  height: 30px;
   background: rgb(251, 252, 253);
   border-radius: 50%;
   cursor: pointer;
 }
+
 .username {
   width: 160px;
   /* margin-left: 50px; */
@@ -48,7 +53,7 @@
     gap: 1.5vw;
   }
 
-  .search{
+  .search {
     width: 18vw;
     position: relative;
     margin: auto;
@@ -74,17 +79,20 @@
   }
 }
 
-@media(max-width:990px){
-  .navlink{
+@media(max-width:990px) {
+  .navlink {
     font-size: 20px;
   }
-  .username{
+
+  .username {
     margin-top: 10px;
   }
-  .search{
+
+  .search {
     width: 30vw;
     position: relative;
   }
+
   .iconSearch {
     position: absolute;
     left: 24.5vw;
@@ -105,4 +113,31 @@
 
 .input {
   width: 80%;
+}
+
+.CardContainer {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  justify-content: space-evenly;
+}
+
+/* Card Builder css*/
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  height: min-content;
+}
+
+@media only screen and (min-width:844px) {
+  .card {
+    width: 500px;
+    height: min-content;
+  }
 }

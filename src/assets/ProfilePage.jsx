@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useUserContext } from "../Contexts/UserContext";
 import { API } from "../global";
 import { useNavigate } from "react-router-dom";
@@ -43,7 +42,7 @@ const ProfilePage = () => {
       headers: {
         "Content-Type": "application/json",
       },
-    }).then(() => navigate("/"));
+    }).then(() => navigate("/profile"));
   };
 
   const handleInputChange = (e) => {
@@ -137,6 +136,20 @@ const ProfilePage = () => {
                     id="email"
                     name="email"
                     value={userData.emailId}
+                    onChange={handleInputChange}
+                    readOnly={!editMode}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="sports" className="form-label">
+                    Sports
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="sports"
+                    name="sports"
+                    value={userData.sports}
                     onChange={handleInputChange}
                     readOnly={!editMode}
                   />

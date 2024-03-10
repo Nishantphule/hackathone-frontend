@@ -44,7 +44,7 @@ export default function Login() {
         } else {
           setUser(data.user, data.token);
           alert("Successfully Logged In");
-          navigate("/");
+          navigate("/home");
         }
       });
   };

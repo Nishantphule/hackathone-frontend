@@ -11,6 +11,7 @@ import SignUp from "./assets/SignUp";
 import "./App.css";
 import { useUserContext } from "./Contexts/UserContext";
 import ProfilePage from "./assets/ProfilePage";
+import Home from "./assets/Home";
 
 function App() {
   const navigate = useNavigate();
@@ -30,9 +31,9 @@ function App() {
               style={{ maxHeight: "200px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
-              <Nav.Link href="#action2">Sports</Nav.Link>
-              <Nav.Link href="#action2">ContactUs</Nav.Link>
+              <Nav.Link onClick={() => navigate("/home")}>Home</Nav.Link>
+              <Nav.Link onClick={() => navigate("/home")}>Sports</Nav.Link>
+              <Nav.Link onClick={() => navigate("/home")}>ContactUs</Nav.Link>
             </Nav>
             <Form className="d-flex searchIconP">
               <Form.Control
@@ -49,7 +50,7 @@ function App() {
                 id="dropdown-basic"
                 className="username"
               >
-                Username
+                User
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
@@ -61,7 +62,7 @@ function App() {
                     <Dropdown.Item
                       onClick={() => {
                         logout();
-                        navigate("/");
+                        navigate("/login");
                       }}
                     >
                       Logout
@@ -83,6 +84,7 @@ function App() {
         </Container>
       </Navbar>
       <Routes>
+        <Route path="/home" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/profile" element={<ProfilePage />} />
