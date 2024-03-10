@@ -38,7 +38,7 @@ const ProfilePage = () => {
   const handleSubmit = (data) => {
     console.log(data);
     fetch(`${API}/users/editUser/${userId}`, {
-      method: "PUT",
+      method: "PATCH",
       body: JSON.stringify(data),
       headers: {
         "Content-Type": "application/json",
