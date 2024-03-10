@@ -21,7 +21,7 @@ function App() {
     <>
       <Navbar expand="lg" className="bg-body-primary navbarmain">
         <Container fluid>
-          <Navbar.Brand href="#">
+          <Navbar.Brand onClick={() => navigate("/home")}>
             Sports <SportsHandballIcon />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
